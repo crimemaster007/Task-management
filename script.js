@@ -2,16 +2,16 @@ let hamburgerBtn = document.getElementById("hamburger-btn");
 let hamburgerMenu = document.getElementById("hamburger");
 let sidebarClose = document.getElementById("sidebar-close");
 
-function toggleMenu() {
-  if (hamburgerMenu.classList.contains("showMenu"))
-    hamburgerMenu.classList.remove("showMenu");
-  else {
-    hamburgerMenu.classList.add("showMenu");
-  }
-
-  // hamburgerBtn.style.display = "block";
+function hamburgerClick(){
+  let element = document.getElementById("hamburger");
+  element.classList.add("showMenu");
+  sidebarClose.style.display="block";
 }
+hamburgerBtn.addEventListener("click",hamburgerClick);
 
-hamburgerBtn.addEventListener("click", toggleMenu);
-sidebarClose.addEventListener("click", toggleMenu);
-
+function crossClick(){
+  let element = document.getElementById("hamburger");
+  element.classList.remove("showMenu");
+  sidebarClose.style.display="none";
+}
+sidebarClose.addEventListener("click",crossClick);
