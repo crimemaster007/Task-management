@@ -27,6 +27,7 @@ body {
 #hamburger-btn {
   font-size: 2rem;
   cursor: pointer;
+  margin-left: 2rem;
 }
 
 #header-title {
@@ -45,7 +46,7 @@ body {
   margin-top: 0.6rem;
 }
 
-.hamburger, .showMenu {
+/* .hamburger, .showMenu {
     height: 100%;
     width: 18%;
     position: fixed;
@@ -53,10 +54,23 @@ body {
     top: 0;
     left: 0;
     background-color: #414061;
+    background-color: red;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 4rem;
 
+} */
+.showMenu{
+  height: 100%;
+  width: 18%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #414061;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 4rem;
 }
 
 .hamburger p.board-title {
@@ -93,7 +107,7 @@ body {
   box-shadow: 3px 3px yellow;
 }
 
-.hamburger #sidebar-close {
+ #sidebar-close {
   color: white;
   cursor: pointer;
   position: absolute;
@@ -101,6 +115,7 @@ body {
   right: 25px;
   font-size: 2.25rem;
   margin-left: 50px;
+  display: none;
 }
 
 input[type="text"] {
@@ -233,4 +248,72 @@ margin: 2px 20px 12px 10px ;
   letter-spacing: 0.7rem;
 }
 
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #233138;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 4rem;
+}
 
+.sidenav p.is-title {
+  font-size: 1.5rem;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.sidenav p:hover {
+  color: white;
+}
+
+.sidenav > ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sidenav > ul > li {
+  font-size: 1rem;
+  color: black;
+  background-color: #f3f3f3;
+  padding: 0.5rem;
+  margin-inline: 1em;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 3px 3px var(--primary-color-light);
+}
+
+.sidenav > ul > li.is-active {
+  box-shadow: 3px 3px yellow;
+}
+
+.sidenav > ul > li.is-active:hover {
+  box-shadow: 3px 3px orange;
+}
+
+.sidenav > ul > li:hover {
+  color: var(--primary-color-dark);
+  cursor: pointer;
+  box-shadow: 3px 3px var(--primary-color-dark);
+}
+
+.sidenav #sidebar-close {
+  color: gray;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 2.25rem;
+  margin-left: 50px;
+}
+
+.fa:hover, #sidebar-button:hover {
+  cursor: pointer;
+  color: var(--primary-color-light);
+}
